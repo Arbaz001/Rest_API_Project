@@ -11,6 +11,18 @@ const port=8080;
 //Middleware - plugin
 app.use(express.urlencoded({extended:false}));
 
+app.use((req,res,next) => {
+    // console.log("hello from middleware 1");
+    // return res.json({msg : 'hello from middleware 1'});
+    fs.appendFile('log.txt',`${req.ip}: ${Date.now()}: ${req.method}: ${req.path} \n`,
+    (err,data) => {
+        next();
+    }
+    );
+});
+
+
+
 //routes define
 
 //html render without api
