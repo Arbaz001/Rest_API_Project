@@ -1,10 +1,15 @@
 // import the express module
 const express=require("express");
+const fs=require("fs");
 
 // import users data file
 const users=require("./MOCK_DATA.json")
 const app=express();
 const port=8080;
+
+//use middleware for user request  (assume use as a plugin)
+//Middleware - plugin
+app.use(express.urlencoded({extended:false}));
 
 //routes define
 
@@ -36,13 +41,27 @@ app.route('/api/users/:id')
 })
 .delete((req,res) => {
     //Delete user with id
-    return res.json({status: "pending"});
+    const id=Number(req.params.id);
+    const user=users.find((user)=>user.id===id);
+
+    users.pop({ id:users.length-1,...user});
+    return res.json({status: "deleted",id: users.length+1});
+    // const body=req.body;
+    // users.pop({ id:users.length-1,...body});
+    // fs.unlink('./MOCK_DATA.json', (err,data)=>{
+    //  return res.json({status: "succes",id: users.length});
+    // });
+
 });
 
 // POST /api/users 8- Create new user
 app.post('/api/users',(req,res) => {
-    return res.json({status: "pending"});
-})
+   const body=req.body;
+   users.push({ id:users.length+1,...body});
+   fs.writeFile('./MOCK_DATA.json', JSON.stringify(users), (err,data)=>{
+    return res.json({status: "succes",id: users.length});
+   });
+});
 
 // PATCH /api/users/1 - Edit the user with ID 1
 // app.patch('/api/users/:id',(req,res) => {
