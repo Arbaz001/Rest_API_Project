@@ -35,6 +35,11 @@ app.use((req,res,next) => {
 
 //GET /api/users - List all Users
 app.get('/api/users', (req,res) => {
+    //custom headers response     //Always add X to custom headers --> it,s good practices
+    res.setHeader("X-myName","Arbaz ali");
+    //custom headers request
+       console.log(req.headers);
+       
     return res.json(users);
 });
 
