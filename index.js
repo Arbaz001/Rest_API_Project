@@ -1,6 +1,6 @@
 const express = require("express");
 
-const {connectMongoDb} = require("./connection")
+const {connectMongoDb} = require("./connection");
 
 const {logReqRes} = require("./middlewares");
 
