@@ -1,0 +1,262 @@
+Schema - Define the structure
+  Schema - Model
+  Using these Model we do CRUD operations
+
+  terminal ki bate
+
+  Microsoft Windows [Version 10.0.22631.4317]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\Admin>mongosh
+Current Mongosh Log ID: 67204eea827e76650e86b01c
+Connecting to:          mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.3.2
+Using MongoDB:          8.0.3
+Using Mongosh:          2.3.2
+
+For mongosh info see: https://www.mongodb.com/docs/mongodb-shell/
+
+------
+   The server generated these startup warnings when booting
+   2024-10-26T19:22:34.524+05:30: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+------
+
+test> use dbs
+switched to db dbs
+dbs> show dbs
+admin           40.00 KiB
+config         108.00 KiB
+local           40.00 KiB
+youtube-app-1   12.00 KiB
+dbs> use youtube-app-1
+switched to db youtube-app-1
+youtube-app-1> show collections
+users
+youtube-app-1> db.users.find({})
+
+youtube-app-1> db.users.find({})
+[
+  {
+    _id: ObjectId('6720625369e266de4b691a7c'),
+    firstName: 'bajirao',
+    lastName: 'anna',
+    email: 'annagsfdh.dev',
+    jobTitle: 'sde',
+    gender: 'male',
+    __v: 0
+  }
+]
+youtube-app-1> db.users.find({})
+[
+  {
+    _id: ObjectId('6720625369e266de4b691a7c'),
+    firstName: 'bajirao',
+    lastName: 'anna',
+    email: 'annagsfdh.dev',
+    jobTitle: 'sde',
+    gender: 'male',
+    __v: 0
+  },
+  {
+    _id: ObjectId('67206980e507066d9a0eb663'),
+    firstName: 'rana',
+    lastName: 'tahir',
+    email: 'bannnagsfdh.dev',
+    jobTitle: 'sde',
+    gender: 'male',
+    createdAt: ISODate('2024-10-29T04:50:08.065Z'),
+    updatedAt: ISODate('2024-10-29T04:50:08.065Z'),
+    __v: 0
+  }
+]
+youtube-app-1> db.users.find({})
+[
+  {
+    _id: ObjectId('6720625369e266de4b691a7c'),
+    firstName: 'bajirao',
+    lastName: 'anna',
+    email: 'annagsfdh.dev',
+    jobTitle: 'sde',
+    gender: 'male',
+    __v: 0
+  },
+  {
+    _id: ObjectId('67206980e507066d9a0eb663'),
+    firstName: 'rana',
+    lastName: 'tahir',
+    email: 'bannnagsfdh.dev',
+    jobTitle: 'sde',
+    gender: 'male',
+    createdAt: ISODate('2024-10-29T04:50:08.065Z'),
+    updatedAt: ISODate('2024-10-29T04:50:08.065Z'),
+    __v: 0
+  },
+  {
+    _id: ObjectId('67206a8c9cd71559bfddc646'),
+    firstName: 'crana',
+    lastName: 'tahir',
+    email: 'cbannnagsfdh.dev',
+    jobTitle: 'sde',
+    gender: 'male',
+    createdAt: ISODate('2024-10-29T04:54:36.952Z'),
+    updatedAt: ISODate('2024-10-29T04:54:36.952Z'),
+    __v: 0
+  }
+]
+youtube-app-1> db.users.find({})
+[
+  {
+    _id: ObjectId('6720625369e266de4b691a7c'),
+    firstName: 'bajirao',
+    lastName: 'anna',
+    email: 'annagsfdh.dev',
+    jobTitle: 'sde',
+    gender: 'male',
+    __v: 0
+  },
+  {
+    _id: ObjectId('67206980e507066d9a0eb663'),
+    firstName: 'rana',
+    lastName: 'tahir',
+    email: 'bannnagsfdh.dev',
+    jobTitle: 'sde',
+    gender: 'male',
+    createdAt: ISODate('2024-10-29T04:50:08.065Z'),
+    updatedAt: ISODate('2024-10-29T04:50:08.065Z'),
+    __v: 0
+  },
+  {
+    _id: ObjectId('67206a8c9cd71559bfddc646'),
+    firstName: 'crana',
+    lastName: 'tahir',
+    email: 'cbannnagsfdh.dev',
+    jobTitle: 'sde',
+    gender: 'male',
+    createdAt: ISODate('2024-10-29T04:54:36.952Z'),
+    updatedAt: ISODate('2024-10-29T04:54:36.952Z'),
+    __v: 0
+  },
+  {
+    _id: ObjectId('67206b6bf9054c7314ba5fec'),
+    firstName: 'aaakaki',
+    lastName: 'tahir',
+    email: 'cdsfasdfbannnagsfdh.dev',
+    jobTitle: 'sde',
+    gender: 'male',
+    createdAt: ISODate('2024-10-29T04:58:19.831Z'),
+    updatedAt: ISODate('2024-10-29T04:58:19.831Z'),
+    __v: 0
+  },
+  {
+    _id: ObjectId('67207b41f78b3eb46e69e244'),
+    firstName: 'aaakakirer',
+    lastName: 'tahira',
+    email: 'cdsfasdfbannnagsfdh.devrwqr',
+    jobTitle: 'sde',
+    gender: 'male',
+    createdAt: ISODate('2024-10-29T06:05:53.135Z'),
+    updatedAt: ISODate('2024-10-29T06:05:53.135Z'),
+    __v: 0
+  }
+]
+youtube-app-1> db.users.find({})
+[
+  {
+    _id: ObjectId('6720625369e266de4b691a7c'),
+    firstName: 'bajirao',
+    lastName: 'anna',
+    email: 'annagsfdh.dev',
+    jobTitle: 'sde',
+    gender: 'male',
+    __v: 0
+  },
+  {
+    _id: ObjectId('67206980e507066d9a0eb663'),
+    firstName: 'rana',
+    lastName: 'tahir',
+    email: 'bannnagsfdh.dev',
+    jobTitle: 'sde',
+    gender: 'male',
+    createdAt: ISODate('2024-10-29T04:50:08.065Z'),
+    updatedAt: ISODate('2024-10-29T04:50:08.065Z'),
+    __v: 0
+  },
+  {
+    _id: ObjectId('67206a8c9cd71559bfddc646'),
+    firstName: 'crana',
+    lastName: 'tahir',
+    email: 'cbannnagsfdh.dev',
+    jobTitle: 'sde',
+    gender: 'male',
+    createdAt: ISODate('2024-10-29T04:54:36.952Z'),
+    updatedAt: ISODate('2024-10-29T04:54:36.952Z'),
+    __v: 0
+  },
+  {
+    _id: ObjectId('67206b6bf9054c7314ba5fec'),
+    firstName: 'aaakaki',
+    lastName: 'Changed',
+    email: 'cdsfasdfbannnagsfdh.dev',
+    jobTitle: 'sde',
+    gender: 'male',
+    createdAt: ISODate('2024-10-29T04:58:19.831Z'),
+    updatedAt: ISODate('2024-10-29T11:49:45.664Z'),
+    __v: 0
+  },
+  {
+    _id: ObjectId('67207b41f78b3eb46e69e244'),
+    firstName: 'aaakakirer',
+    lastName: 'tahira',
+    email: 'cdsfasdfbannnagsfdh.devrwqr',
+    jobTitle: 'sde',
+    gender: 'male',
+    createdAt: ISODate('2024-10-29T06:05:53.135Z'),
+    updatedAt: ISODate('2024-10-29T06:05:53.135Z'),
+    __v: 0
+  }
+]
+youtube-app-1> db.users.find({})
+[
+  {
+    _id: ObjectId('6720625369e266de4b691a7c'),
+    firstName: 'bajirao',
+    lastName: 'anna',
+    email: 'annagsfdh.dev',
+    jobTitle: 'sde',
+    gender: 'male',
+    __v: 0
+  },
+  {
+    _id: ObjectId('67206980e507066d9a0eb663'),
+    firstName: 'rana',
+    lastName: 'tahir',
+    email: 'bannnagsfdh.dev',
+    jobTitle: 'sde',
+    gender: 'male',
+    createdAt: ISODate('2024-10-29T04:50:08.065Z'),
+    updatedAt: ISODate('2024-10-29T04:50:08.065Z'),
+    __v: 0
+  },
+  {
+    _id: ObjectId('67206a8c9cd71559bfddc646'),
+    firstName: 'crana',
+    lastName: 'tahir',
+    email: 'cbannnagsfdh.dev',
+    jobTitle: 'sde',
+    gender: 'male',
+    createdAt: ISODate('2024-10-29T04:54:36.952Z'),
+    updatedAt: ISODate('2024-10-29T04:54:36.952Z'),
+    __v: 0
+  },
+  {
+    _id: ObjectId('67206b6bf9054c7314ba5fec'),
+    firstName: 'aaakaki',
+    lastName: 'Changed',
+    email: 'cdsfasdfbannnagsfdh.dev',
+    jobTitle: 'sde',
+    gender: 'male',
+    createdAt: ISODate('2024-10-29T04:58:19.831Z'),
+    updatedAt: ISODate('2024-10-29T11:49:45.664Z'),
+    __v: 0
+  }
+]
+youtube-app-1>
